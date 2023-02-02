@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4DC763C53CD3339C5B2A3D41 /* Pods_Sequis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A304FD7105DF611FB955A4 /* Pods_Sequis.framework */; };
 		80304CF9298BE59000DFCEDA /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304CF8298BE59000DFCEDA /* ImageDetailViewController.swift */; };
+		80304CFD298BEFA700DFCEDA /* MyLocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304CFC298BEFA700DFCEDA /* MyLocalDatabase.swift */; };
+		80304D02298BF1EA00DFCEDA /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D01298BF1EA00DFCEDA /* RealmHelper.swift */; };
+		80304D06298BF3BA00DFCEDA /* RealmDatabaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D05298BF3BA00DFCEDA /* RealmDatabaseModule.swift */; };
+		80304D09298BF57D00DFCEDA /* LocalCommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D08298BF57D00DFCEDA /* LocalCommentEntity.swift */; };
+		80304D0C298BF66900DFCEDA /* CommentLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */; };
+		80304D0E298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D0D298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift */; };
 		80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78768298B94C200FCFA08 /* AppDelegate.swift */; };
 		80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876A298B94C200FCFA08 /* SceneDelegate.swift */; };
 		80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876C298B94C200FCFA08 /* ViewController.swift */; };
@@ -54,6 +60,12 @@
 
 /* Begin PBXFileReference section */
 		80304CF8298BE59000DFCEDA /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		80304CFC298BEFA700DFCEDA /* MyLocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocalDatabase.swift; sourceTree = "<group>"; };
+		80304D01298BF1EA00DFCEDA /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		80304D05298BF3BA00DFCEDA /* RealmDatabaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseModule.swift; sourceTree = "<group>"; };
+		80304D08298BF57D00DFCEDA /* LocalCommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCommentEntity.swift; sourceTree = "<group>"; };
+		80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLocalDataSource.swift; sourceTree = "<group>"; };
+		80304D0D298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyLocalDatabase+Comment.swift"; sourceTree = "<group>"; };
 		80C78765298B94C200FCFA08 /* Sequis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C78768298B94C200FCFA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C7876A298B94C200FCFA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +126,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80304CFA298BEEFF00DFCEDA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				80304D0A298BF64D00DFCEDA /* Interface */,
+				80304D07298BF55000DFCEDA /* Entity */,
+				80304CFB298BEF7500DFCEDA /* MyDatabase */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		80304CFB298BEF7500DFCEDA /* MyDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				80304CFC298BEFA700DFCEDA /* MyLocalDatabase.swift */,
+				80304D0D298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift */,
+			);
+			path = MyDatabase;
+			sourceTree = "<group>";
+		};
+		80304D00298BF1D200DFCEDA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				80304D01298BF1EA00DFCEDA /* RealmHelper.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		80304D03298BF38000DFCEDA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				80C78794298B999900FCFA08 /* NetworkingModule.swift */,
+				80C7878E298B98D600FCFA08 /* MyAPIModule.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		80304D04298BF39F00DFCEDA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				80304D05298BF3BA00DFCEDA /* RealmDatabaseModule.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		80304D07298BF55000DFCEDA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				80304D08298BF57D00DFCEDA /* LocalCommentEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		80304D0A298BF64D00DFCEDA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		80C7875C298B94C200FCFA08 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +231,7 @@
 		80C78780298B97A800FCFA08 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				80304CFA298BEEFF00DFCEDA /* Local */,
 				80C78790298B993F00FCFA08 /* Remote */,
 			);
 			path = DataLayer;
@@ -215,8 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				80C78789298B987F00FCFA08 /* DataModule.swift */,
-				80C7878E298B98D600FCFA08 /* MyAPIModule.swift */,
-				80C78794298B999900FCFA08 /* NetworkingModule.swift */,
+				80304D04298BF39F00DFCEDA /* Local */,
+				80304D03298BF38000DFCEDA /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,6 +324,7 @@
 		80C78796298B99C100FCFA08 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				80304D00298BF1D200DFCEDA /* Realm */,
 				80C78797298B99CD00FCFA08 /* Constans.swift */,
 			);
 			path = Misc;
@@ -508,6 +582,7 @@
 			files = (
 				80C787D0298BC53000FCFA08 /* DomainImageEntity.swift in Sources */,
 				80304CF9298BE59000DFCEDA /* ImageDetailViewController.swift in Sources */,
+				80304D02298BF1EA00DFCEDA /* RealmHelper.swift in Sources */,
 				80C787D9298BC98C00FCFA08 /* ImageListViewModel.swift in Sources */,
 				80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */,
 				80C787DD298BCB5800FCFA08 /* ViewModelModule.swift in Sources */,
@@ -526,20 +601,25 @@
 				80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */,
 				80C787B4298BA42A00FCFA08 /* PresentationModule.swift in Sources */,
 				80C7879E298B9AF600FCFA08 /* CoreModule.swift in Sources */,
+				80304D0E298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift in Sources */,
 				80C787C7298BB78F00FCFA08 /* UIViewControllerExtension.swift in Sources */,
 				80C787A3298B9B4200FCFA08 /* ProvidedInjectorResolver.swift in Sources */,
+				80304CFD298BEFA700DFCEDA /* MyLocalDatabase.swift in Sources */,
 				80C787A7298B9B8600FCFA08 /* ViewControllerResolver.swift in Sources */,
 				80C787CD298BC4EF00FCFA08 /* GetImagesRepository.swift in Sources */,
 				80C787B2298BA41F00FCFA08 /* MainPageModule.swift in Sources */,
 				80C787D4298BC59C00FCFA08 /* GetImageRepositoryImpl.swift in Sources */,
+				80304D0C298BF66900DFCEDA /* CommentLocalDataSource.swift in Sources */,
 				80C787D2298BC57A00FCFA08 /* NameSpaceDomain.swift in Sources */,
 				80C787AD298B9C0600FCFA08 /* AppComponent.swift in Sources */,
+				80304D09298BF57D00DFCEDA /* LocalCommentEntity.swift in Sources */,
 				80C78793298B996000FCFA08 /* MyJsonAPI.swift in Sources */,
 				80C7878A298B987F00FCFA08 /* DataModule.swift in Sources */,
 				80C787B6298BA45100FCFA08 /* UIKitModule.swift in Sources */,
 				80C787DB298BC9F600FCFA08 /* ImageListViewModelImpl.swift in Sources */,
 				80C787BE298BA72000FCFA08 /* DataImageEntity.swift in Sources */,
 				80C7878D298B98A300FCFA08 /* SingletonScope.swift in Sources */,
+				80304D06298BF3BA00DFCEDA /* RealmDatabaseModule.swift in Sources */,
 				80C787C1298BAD6C00FCFA08 /* ImageListViewController.swift in Sources */,
 				80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */,
 				80C787C4298BAF1B00FCFA08 /* ImageTableCell.swift in Sources */,
