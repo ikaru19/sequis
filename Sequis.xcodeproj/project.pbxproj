@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC763C53CD3339C5B2A3D41 /* Pods_Sequis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A304FD7105DF611FB955A4 /* Pods_Sequis.framework */; };
+		80304CF9298BE59000DFCEDA /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304CF8298BE59000DFCEDA /* ImageDetailViewController.swift */; };
 		80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78768298B94C200FCFA08 /* AppDelegate.swift */; };
 		80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876A298B94C200FCFA08 /* SceneDelegate.swift */; };
 		80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876C298B94C200FCFA08 /* ViewController.swift */; };
@@ -37,9 +38,22 @@
 		80C787B8298BA69800FCFA08 /* MyJsonAPI+ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787B7298BA69800FCFA08 /* MyJsonAPI+ImageList.swift */; };
 		80C787BB298BA6C600FCFA08 /* GetImageListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787BA298BA6C600FCFA08 /* GetImageListDataSource.swift */; };
 		80C787BE298BA72000FCFA08 /* DataImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787BD298BA72000FCFA08 /* DataImageEntity.swift */; };
+		80C787C1298BAD6C00FCFA08 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787C0298BAD6C00FCFA08 /* ImageListViewController.swift */; };
+		80C787C4298BAF1B00FCFA08 /* ImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787C3298BAF1B00FCFA08 /* ImageTableCell.swift */; };
+		80C787C7298BB78F00FCFA08 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787C6298BB78F00FCFA08 /* UIViewControllerExtension.swift */; };
+		80C787CD298BC4EF00FCFA08 /* GetImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787CC298BC4EF00FCFA08 /* GetImagesRepository.swift */; };
+		80C787D0298BC53000FCFA08 /* DomainImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787CF298BC53000FCFA08 /* DomainImageEntity.swift */; };
+		80C787D2298BC57A00FCFA08 /* NameSpaceDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787D1298BC57900FCFA08 /* NameSpaceDomain.swift */; };
+		80C787D4298BC59C00FCFA08 /* GetImageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787D3298BC59C00FCFA08 /* GetImageRepositoryImpl.swift */; };
+		80C787D7298BC75F00FCFA08 /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787D6298BC75F00FCFA08 /* DomainModule.swift */; };
+		80C787D9298BC98C00FCFA08 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787D8298BC98C00FCFA08 /* ImageListViewModel.swift */; };
+		80C787DB298BC9F600FCFA08 /* ImageListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787DA298BC9F600FCFA08 /* ImageListViewModelImpl.swift */; };
+		80C787DD298BCB5800FCFA08 /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787DC298BCB5800FCFA08 /* ViewModelModule.swift */; };
+		80C787DF298BCC4600FCFA08 /* UIKitControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787DE298BCC4600FCFA08 /* UIKitControllerModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80304CF8298BE59000DFCEDA /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		80C78765298B94C200FCFA08 /* Sequis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C78768298B94C200FCFA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C7876A298B94C200FCFA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +85,18 @@
 		80C787B7298BA69800FCFA08 /* MyJsonAPI+ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyJsonAPI+ImageList.swift"; sourceTree = "<group>"; };
 		80C787BA298BA6C600FCFA08 /* GetImageListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageListDataSource.swift; sourceTree = "<group>"; };
 		80C787BD298BA72000FCFA08 /* DataImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImageEntity.swift; sourceTree = "<group>"; };
+		80C787C0298BAD6C00FCFA08 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		80C787C3298BAF1B00FCFA08 /* ImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCell.swift; sourceTree = "<group>"; };
+		80C787C6298BB78F00FCFA08 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		80C787CC298BC4EF00FCFA08 /* GetImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImagesRepository.swift; sourceTree = "<group>"; };
+		80C787CF298BC53000FCFA08 /* DomainImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainImageEntity.swift; sourceTree = "<group>"; };
+		80C787D1298BC57900FCFA08 /* NameSpaceDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpaceDomain.swift; sourceTree = "<group>"; };
+		80C787D3298BC59C00FCFA08 /* GetImageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageRepositoryImpl.swift; sourceTree = "<group>"; };
+		80C787D6298BC75F00FCFA08 /* DomainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModule.swift; sourceTree = "<group>"; };
+		80C787D8298BC98C00FCFA08 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
+		80C787DA298BC9F600FCFA08 /* ImageListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModelImpl.swift; sourceTree = "<group>"; };
+		80C787DC298BCB5800FCFA08 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
+		80C787DE298BCC4600FCFA08 /* UIKitControllerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitControllerModule.swift; sourceTree = "<group>"; };
 		9DE8D392EB93AD9758AB2F9B /* Pods-Sequis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sequis.release.xcconfig"; path = "Target Support Files/Pods-Sequis/Pods-Sequis.release.xcconfig"; sourceTree = "<group>"; };
 		A2A304FD7105DF611FB955A4 /* Pods_Sequis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sequis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB46F0163EC65A61F725688 /* Pods-Sequis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sequis.debug.xcconfig"; path = "Target Support Files/Pods-Sequis/Pods-Sequis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +135,8 @@
 		80C78767298B94C200FCFA08 /* Sequis */ = {
 			isa = PBXGroup;
 			children = (
+				80C787CA298BC4B800FCFA08 /* DomainLayer */,
+				80C787C5298BB77C00FCFA08 /* Extension */,
 				80C787BF298BAD4E00FCFA08 /* PresentationLayer */,
 				80C78796298B99C100FCFA08 /* Misc */,
 				80C78786298B984500FCFA08 /* DI */,
@@ -175,6 +203,7 @@
 		80C78787298B984F00FCFA08 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				80C787D5298BC75300FCFA08 /* Domain */,
 				80C787B0298BA40900FCFA08 /* Presentation */,
 				80C78788298B985D00FCFA08 /* Data */,
 				80C7879D298B9AF600FCFA08 /* CoreModule.swift */,
@@ -244,6 +273,8 @@
 				80C787B1298BA41F00FCFA08 /* MainPageModule.swift */,
 				80C787B3298BA42A00FCFA08 /* PresentationModule.swift */,
 				80C787B5298BA45100FCFA08 /* UIKitModule.swift */,
+				80C787DC298BCB5800FCFA08 /* ViewModelModule.swift */,
+				80C787DE298BCC4600FCFA08 /* UIKitControllerModule.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -262,6 +293,85 @@
 				80C787BD298BA72000FCFA08 /* DataImageEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		80C787BF298BAD4E00FCFA08 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				80C787C9298BC3BC00FCFA08 /* ViewModel */,
+				80C787C8298BC3B000FCFA08 /* UIKit */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		80C787C2298BAF0400FCFA08 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				80C787C3298BAF1B00FCFA08 /* ImageTableCell.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		80C787C5298BB77C00FCFA08 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				80C787C6298BB78F00FCFA08 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		80C787C8298BC3B000FCFA08 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				80C787C2298BAF0400FCFA08 /* Component */,
+				80C787C0298BAD6C00FCFA08 /* ImageListViewController.swift */,
+				80304CF8298BE59000DFCEDA /* ImageDetailViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		80C787C9298BC3BC00FCFA08 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				80C787D8298BC98C00FCFA08 /* ImageListViewModel.swift */,
+				80C787DA298BC9F600FCFA08 /* ImageListViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		80C787CA298BC4B800FCFA08 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				80C787CE298BC52000FCFA08 /* Entity */,
+				80C787CB298BC4CD00FCFA08 /* Repository */,
+				80C787D1298BC57900FCFA08 /* NameSpaceDomain.swift */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		80C787CB298BC4CD00FCFA08 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				80C787CC298BC4EF00FCFA08 /* GetImagesRepository.swift */,
+				80C787D3298BC59C00FCFA08 /* GetImageRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		80C787CE298BC52000FCFA08 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				80C787CF298BC53000FCFA08 /* DomainImageEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		80C787D5298BC75300FCFA08 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				80C787D6298BC75F00FCFA08 /* DomainModule.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		AA8E6532EEA95E94ACEB7B14 /* Pods */ = {
@@ -396,9 +506,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C787D0298BC53000FCFA08 /* DomainImageEntity.swift in Sources */,
+				80304CF9298BE59000DFCEDA /* ImageDetailViewController.swift in Sources */,
+				80C787D9298BC98C00FCFA08 /* ImageListViewModel.swift in Sources */,
 				80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */,
+				80C787DD298BCB5800FCFA08 /* ViewModelModule.swift in Sources */,
 				80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */,
 				80C78798298B99CD00FCFA08 /* Constans.swift in Sources */,
+				80C787DF298BCC4600FCFA08 /* UIKitControllerModule.swift in Sources */,
 				80C787A1298B9B2700FCFA08 /* InjectorResolver.swift in Sources */,
 				80C7879A298B9A0A00FCFA08 /* MyAFRequest.swift in Sources */,
 				80C787BB298BA6C600FCFA08 /* GetImageListDataSource.swift in Sources */,
@@ -411,17 +526,25 @@
 				80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */,
 				80C787B4298BA42A00FCFA08 /* PresentationModule.swift in Sources */,
 				80C7879E298B9AF600FCFA08 /* CoreModule.swift in Sources */,
+				80C787C7298BB78F00FCFA08 /* UIViewControllerExtension.swift in Sources */,
 				80C787A3298B9B4200FCFA08 /* ProvidedInjectorResolver.swift in Sources */,
 				80C787A7298B9B8600FCFA08 /* ViewControllerResolver.swift in Sources */,
+				80C787CD298BC4EF00FCFA08 /* GetImagesRepository.swift in Sources */,
 				80C787B2298BA41F00FCFA08 /* MainPageModule.swift in Sources */,
+				80C787D4298BC59C00FCFA08 /* GetImageRepositoryImpl.swift in Sources */,
+				80C787D2298BC57A00FCFA08 /* NameSpaceDomain.swift in Sources */,
 				80C787AD298B9C0600FCFA08 /* AppComponent.swift in Sources */,
 				80C78793298B996000FCFA08 /* MyJsonAPI.swift in Sources */,
 				80C7878A298B987F00FCFA08 /* DataModule.swift in Sources */,
 				80C787B6298BA45100FCFA08 /* UIKitModule.swift in Sources */,
+				80C787DB298BC9F600FCFA08 /* ImageListViewModelImpl.swift in Sources */,
 				80C787BE298BA72000FCFA08 /* DataImageEntity.swift in Sources */,
 				80C7878D298B98A300FCFA08 /* SingletonScope.swift in Sources */,
+				80C787C1298BAD6C00FCFA08 /* ImageListViewController.swift in Sources */,
 				80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */,
+				80C787C4298BAF1B00FCFA08 /* ImageTableCell.swift in Sources */,
 				80C78783298B97FC00FCFA08 /* JsonRequest.swift in Sources */,
+				80C787D7298BC75F00FCFA08 /* DomainModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

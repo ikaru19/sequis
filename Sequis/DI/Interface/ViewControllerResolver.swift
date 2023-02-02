@@ -9,5 +9,5 @@ import Foundation
 import Cleanse
 
 protocol ViewControllerResolver: AnyObject {
-    
+    func instantiateImageListViewController() -> Provider<ImageListViewController>
 }

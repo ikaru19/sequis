@@ -10,5 +10,5 @@ import RxSwift
 import Alamofire
 
 protocol GetImageListDataSource: AnyObject {
-    func getImageList() -> Single<[Data.ImageEntity]>
+    func getImageList(page: Int) -> Single<[Data.ImageEntity]>
 }

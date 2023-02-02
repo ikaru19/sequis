@@ -11,10 +11,11 @@ import Alamofire
 import RxAlamofire
 
 extension MyJsonAPI: GetImageListDataSource {
-    func getImageList() -> Single<[Data.ImageEntity]> {
+    func getImageList(page: Int) -> Single<[Data.ImageEntity]> {
         let endpoint = "v2/list"
+        let param = ["page":page]
         return Single.create(subscribe: { [weak self] observer in
-            self?.jsonRequestService.get(to: endpoint, param: [:], header: [:])
+            self?.jsonRequestService.get(to: endpoint, param: param, header: [:])
                     .subscribe(
                             onNext: { [weak self] data in
                                 var postsData : [Data.ImageEntity] = []

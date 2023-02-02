@@ -14,5 +14,6 @@ target 'Sequis' do
   pod 'RxAlamofire', '= 5.6.2'
   pod 'RxSwift', '= 5.1.1'
   pod 'RxCocoa', '= 5.1.1'
+  pod 'SDWebImage', '= 5.15.0'
 
 end

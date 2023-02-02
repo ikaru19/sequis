@@ -11,6 +11,7 @@ import Cleanse
 struct CoreModule: Module {
     static func configure(binder: SingletonScope) {
         binder.include(module: PresentationModule.self)
+        binder.include(module: DomainModule.self)
         binder.include(module: DataModule.self)
 
         binder.bind(InjectorResolver.self)
