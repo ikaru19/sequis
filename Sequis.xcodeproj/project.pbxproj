@@ -15,6 +15,14 @@
 		80304D09298BF57D00DFCEDA /* LocalCommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D08298BF57D00DFCEDA /* LocalCommentEntity.swift */; };
 		80304D0C298BF66900DFCEDA /* CommentLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */; };
 		80304D0E298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D0D298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift */; };
+		80304D10298BFFAB00DFCEDA /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D0F298BFFAB00DFCEDA /* CommentTableCell.swift */; };
+		80304D12298C06CE00DFCEDA /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D11298C06CE00DFCEDA /* CommentRepository.swift */; };
+		80304D14298C06E800DFCEDA /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D13298C06E800DFCEDA /* CommentEntity.swift */; };
+		80304D16298C083D00DFCEDA /* CommentRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D15298C083D00DFCEDA /* CommentRepositoryImpl.swift */; };
+		80304D1C298C0BA300DFCEDA /* lastNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D18298C0BA300DFCEDA /* lastNames.json */; };
+		80304D1D298C0BA300DFCEDA /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D19298C0BA300DFCEDA /* nouns.json */; };
+		80304D1E298C0BA300DFCEDA /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D1A298C0BA300DFCEDA /* verbs.json */; };
+		80304D1F298C0BA300DFCEDA /* firstNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D1B298C0BA300DFCEDA /* firstNames.json */; };
 		80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78768298B94C200FCFA08 /* AppDelegate.swift */; };
 		80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876A298B94C200FCFA08 /* SceneDelegate.swift */; };
 		80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876C298B94C200FCFA08 /* ViewController.swift */; };
@@ -66,6 +74,14 @@
 		80304D08298BF57D00DFCEDA /* LocalCommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCommentEntity.swift; sourceTree = "<group>"; };
 		80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLocalDataSource.swift; sourceTree = "<group>"; };
 		80304D0D298BF6C800DFCEDA /* MyLocalDatabase+Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyLocalDatabase+Comment.swift"; sourceTree = "<group>"; };
+		80304D0F298BFFAB00DFCEDA /* CommentTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
+		80304D11298C06CE00DFCEDA /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
+		80304D13298C06E800DFCEDA /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
+		80304D15298C083D00DFCEDA /* CommentRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepositoryImpl.swift; sourceTree = "<group>"; };
+		80304D18298C0BA300DFCEDA /* lastNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lastNames.json; sourceTree = "<group>"; };
+		80304D19298C0BA300DFCEDA /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		80304D1A298C0BA300DFCEDA /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		80304D1B298C0BA300DFCEDA /* firstNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = firstNames.json; sourceTree = "<group>"; };
 		80C78765298B94C200FCFA08 /* Sequis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C78768298B94C200FCFA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C7876A298B94C200FCFA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +200,17 @@
 				80304D0B298BF66900DFCEDA /* CommentLocalDataSource.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		80304D17298C0B8400DFCEDA /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				80304D1B298C0BA300DFCEDA /* firstNames.json */,
+				80304D18298C0BA300DFCEDA /* lastNames.json */,
+				80304D19298C0BA300DFCEDA /* nouns.json */,
+				80304D1A298C0BA300DFCEDA /* verbs.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		80C7875C298B94C200FCFA08 = {
@@ -324,6 +351,7 @@
 		80C78796298B99C100FCFA08 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				80304D17298C0B8400DFCEDA /* Json */,
 				80304D00298BF1D200DFCEDA /* Realm */,
 				80C78797298B99CD00FCFA08 /* Constans.swift */,
 			);
@@ -382,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				80C787C3298BAF1B00FCFA08 /* ImageTableCell.swift */,
+				80304D0F298BFFAB00DFCEDA /* CommentTableCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -428,6 +457,8 @@
 			children = (
 				80C787CC298BC4EF00FCFA08 /* GetImagesRepository.swift */,
 				80C787D3298BC59C00FCFA08 /* GetImageRepositoryImpl.swift */,
+				80304D11298C06CE00DFCEDA /* CommentRepository.swift */,
+				80304D15298C083D00DFCEDA /* CommentRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -436,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				80C787CF298BC53000FCFA08 /* DomainImageEntity.swift */,
+				80304D13298C06E800DFCEDA /* CommentEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -526,7 +558,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80C78775298B94C800FCFA08 /* LaunchScreen.storyboard in Resources */,
+				80304D1F298C0BA300DFCEDA /* firstNames.json in Resources */,
+				80304D1D298C0BA300DFCEDA /* nouns.json in Resources */,
 				80C78772298B94C800FCFA08 /* Assets.xcassets in Resources */,
+				80304D1C298C0BA300DFCEDA /* lastNames.json in Resources */,
+				80304D1E298C0BA300DFCEDA /* verbs.json in Resources */,
 				80C78770298B94C200FCFA08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,9 +617,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80C787D0298BC53000FCFA08 /* DomainImageEntity.swift in Sources */,
+				80304D12298C06CE00DFCEDA /* CommentRepository.swift in Sources */,
 				80304CF9298BE59000DFCEDA /* ImageDetailViewController.swift in Sources */,
 				80304D02298BF1EA00DFCEDA /* RealmHelper.swift in Sources */,
 				80C787D9298BC98C00FCFA08 /* ImageListViewModel.swift in Sources */,
+				80304D16298C083D00DFCEDA /* CommentRepositoryImpl.swift in Sources */,
 				80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */,
 				80C787DD298BCB5800FCFA08 /* ViewModelModule.swift in Sources */,
 				80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */,
@@ -609,6 +647,7 @@
 				80C787CD298BC4EF00FCFA08 /* GetImagesRepository.swift in Sources */,
 				80C787B2298BA41F00FCFA08 /* MainPageModule.swift in Sources */,
 				80C787D4298BC59C00FCFA08 /* GetImageRepositoryImpl.swift in Sources */,
+				80304D14298C06E800DFCEDA /* CommentEntity.swift in Sources */,
 				80304D0C298BF66900DFCEDA /* CommentLocalDataSource.swift in Sources */,
 				80C787D2298BC57A00FCFA08 /* NameSpaceDomain.swift in Sources */,
 				80C787AD298B9C0600FCFA08 /* AppComponent.swift in Sources */,
@@ -624,6 +663,7 @@
 				80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */,
 				80C787C4298BAF1B00FCFA08 /* ImageTableCell.swift in Sources */,
 				80C78783298B97FC00FCFA08 /* JsonRequest.swift in Sources */,
+				80304D10298BFFAB00DFCEDA /* CommentTableCell.swift in Sources */,
 				80C787D7298BC75F00FCFA08 /* DomainModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

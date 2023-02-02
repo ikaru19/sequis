@@ -109,8 +109,8 @@ private extension ImageDetailViewController {
     
     func initTableView() {
         tvComment?.register(
-            ImageTableCell.self,
-                forCellReuseIdentifier: ImageTableCell.identifier
+            CommentTableCell.self,
+                forCellReuseIdentifier: CommentTableCell.identifier
         )
         self.tvComment?.delegate = self
         self.tvComment?.dataSource = self
@@ -130,8 +130,13 @@ extension ImageDetailViewController: UITableViewDelegate, UITableViewDataSource,
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell.backgroundColor = .gray
+        guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: CommentTableCell.identifier, for: indexPath
+        ) as? CommentTableCell else {
+            print(88)
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
         return cell
     }
     

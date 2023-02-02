@@ -12,5 +12,7 @@ struct DomainModule: Module {
     static func configure(binder: UnscopedBinder) {
         binder.bind(GetImagesRepository.self)
                 .to(factory: GetImagesRepositoryImpl.init)
+        binder.bind(CommentRepository.self)
+                .to(factory: CommentRepositoryImpl.init)
     }
 }
