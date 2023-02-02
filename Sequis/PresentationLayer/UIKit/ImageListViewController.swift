@@ -163,7 +163,6 @@ extension ImageListViewController: UITableViewDelegate, UITableViewDataSource, U
         guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: ImageTableCell.identifier, for: indexPath
         ) as? ImageTableCell else {
-            print(88)
             return UITableViewCell()
         }
         cell.selectionStyle = .none
@@ -172,7 +171,10 @@ extension ImageListViewController: UITableViewDelegate, UITableViewDataSource, U
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc = (UIApplication.shared.delegate as? ProvideViewControllerResolver)?.vcResolver.instantiateImageDetailViewController().get() {
+            vc.data = data[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

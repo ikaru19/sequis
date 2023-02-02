@@ -14,5 +14,9 @@ struct UIKitControllerModule: Module {
             .to {
                 ImageListViewController(nibName: nil, bundle: nil, viewModel: $0)
             }
+        binder.bind(ImageDetailViewController.self)
+            .to {
+                ImageDetailViewController(nibName: nil, bundle: nil, viewModel: $0)
+            }
     }
 }

@@ -53,12 +53,18 @@ extension CommentRepositoryImpl {
     private func rawDataMapper(datas: [LocalCommentEntity]) -> [Domain.CommentEntity] {
         var finalData : [Domain.CommentEntity] = []
         for data in datas {
+            let myTimeInterval = TimeInterval(data.timestamp.value ?? 0)
+            let time = Date(timeIntervalSince1970: TimeInterval(myTimeInterval))
+            let formatter = RelativeDateTimeFormatter()
+            formatter.unitsStyle = .full
+            let relativeDate = formatter.localizedString(for: time, relativeTo: Date())
             var rawData = Domain.CommentEntity(
                 id: data.commentId,
                 firstName: data.firstName,
                 lastName: data.lastName,
                 comment: data.content,
-                contentId: data.contentId
+                contentId: data.contentId,
+                timeStamp: relativeDate
             )
             finalData.append(rawData)
         }

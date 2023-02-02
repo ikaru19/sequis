@@ -13,9 +13,12 @@ class CommentTableCell: UITableViewCell {
     public static let identifier: String = "CommentTableCell"
     private var vwContainer: UIView?
     private var vwAvatar: UIView?
+    private var lbAvatarName: UILabel?
     private var lbName: UILabel?
     private var lbComment: UILabel?
     private var lbDate: UILabel?
+    
+    private var data: Domain.CommentEntity?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,6 +29,14 @@ class CommentTableCell: UITableViewCell {
         super.init(coder: coder)
         initDesign()
     }
+    
+    func updateUI(with data: Domain.CommentEntity) {
+        self.data = data
+        lbName?.text = "\(data.firstName) \(data.lastName)"
+        lbComment?.text = data.comment
+        lbDate?.text = data.timeStamp
+        lbAvatarName?.text = "\(data.firstName.prefix(1))\(data.lastName.prefix(1))"
+    }
 }
 
 // MARK: UIKIT
@@ -34,12 +45,14 @@ private extension CommentTableCell {
         setupBaseView()
         let vwContainer = generateContainer()
         let vwAvatar = generateAvatar()
+        let lbAvatarName = generateLabel(ofSize: 24, weight: .thin, color: .white)
         let lbName = generateLabel(ofSize: 16, weight: .bold)
         let lbComment = generateLabel(ofSize: 12, weight: .regular)
         let lbDate = generateLabel(ofSize: 8, weight: .thin)
         
         contentView.addSubview(vwContainer)
         vwContainer.addSubview(vwAvatar)
+        vwAvatar.addSubview(lbAvatarName)
         vwContainer.addSubview(lbName)
         vwContainer.addSubview(lbComment)
         vwContainer.addSubview(lbDate)
@@ -55,6 +68,10 @@ private extension CommentTableCell {
             make.width.equalTo(50)
         }
         
+        lbAvatarName.snp.makeConstraints { (make: ConstraintMaker) -> Void in
+            make.center.equalToSuperview()
+        }
+        
         lbName.snp.makeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalTo(vwAvatar)
             make.leading.equalTo(vwAvatar.snp.trailing).offset(8)
@@ -64,7 +81,7 @@ private extension CommentTableCell {
         lbComment.snp.makeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalTo(lbName.snp.bottom).offset(4)
             make.leading.equalTo(lbName)
-            make.trailing.lessThanOrEqualToSuperview()
+            make.trailing.lessThanOrEqualToSuperview().offset(-16)
         }
         
         lbDate.snp.makeConstraints { (make: ConstraintMaker) -> Void in
@@ -73,6 +90,11 @@ private extension CommentTableCell {
             make.trailing.lessThanOrEqualToSuperview()
             make.bottom.equalToSuperview().offset(-8)
         }
+        
+        self.lbName = lbName
+        self.lbComment = lbComment
+        self.lbDate = lbDate
+        self.lbAvatarName = lbAvatarName
     }
     
     func setupBaseView() {
@@ -88,24 +110,17 @@ private extension CommentTableCell {
     func generateAvatar() -> UIView {
         let view = UIView(frame: .zero)
         view.layer.cornerRadius = 25;
-
-//        let label = UILabel(frame: CGRect(x: 0, y: (50 - 20) / 2, width: 50, height: 20))
-//        label.textAlignment = .center
-//        label.text = "PG";
-//
-//        view.addSubview(label)
-        view.backgroundColor = .gray
+        view.backgroundColor = .gray.withAlphaComponent(0.7)
         return view
     }
     
-    func generateLabel(ofSize fontSize: CGFloat, weight: UIFont.Weight) -> UILabel {
+    func generateLabel(ofSize fontSize: CGFloat, weight: UIFont.Weight, color: UIColor? = .black) -> UILabel {
         let view = UILabel(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = UIFont.systemFont(ofSize: fontSize, weight: weight)
-        view.textColor = .black
+        view.textColor = color
         view.numberOfLines = 0
         view.textAlignment = .left
-        view.text = "test testtesttesttesttesttesttesttesttest \n testtesttesttesttesttesttest"
         return view
     }
 }

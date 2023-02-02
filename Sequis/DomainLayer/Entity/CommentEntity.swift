@@ -14,5 +14,6 @@ extension Domain {
         var lastName: String
         var comment: String
         var contentId: String
+        var timeStamp: String?
     }
 }

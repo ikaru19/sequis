@@ -23,6 +23,9 @@
 		80304D1D298C0BA300DFCEDA /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D19298C0BA300DFCEDA /* nouns.json */; };
 		80304D1E298C0BA300DFCEDA /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D1A298C0BA300DFCEDA /* verbs.json */; };
 		80304D1F298C0BA300DFCEDA /* firstNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 80304D1B298C0BA300DFCEDA /* firstNames.json */; };
+		80304D21298C0C5000DFCEDA /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D20298C0C5000DFCEDA /* ImageDetailViewModel.swift */; };
+		80304D23298C0CE400DFCEDA /* ImageDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D22298C0CE400DFCEDA /* ImageDetailViewModelImpl.swift */; };
+		80304D29298C18FC00DFCEDA /* JsonFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80304D28298C18FC00DFCEDA /* JsonFileHelper.swift */; };
 		80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78768298B94C200FCFA08 /* AppDelegate.swift */; };
 		80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876A298B94C200FCFA08 /* SceneDelegate.swift */; };
 		80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7876C298B94C200FCFA08 /* ViewController.swift */; };
@@ -82,6 +85,9 @@
 		80304D19298C0BA300DFCEDA /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		80304D1A298C0BA300DFCEDA /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		80304D1B298C0BA300DFCEDA /* firstNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = firstNames.json; sourceTree = "<group>"; };
+		80304D20298C0C5000DFCEDA /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		80304D22298C0CE400DFCEDA /* ImageDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModelImpl.swift; sourceTree = "<group>"; };
+		80304D28298C18FC00DFCEDA /* JsonFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileHelper.swift; sourceTree = "<group>"; };
 		80C78765298B94C200FCFA08 /* Sequis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C78768298B94C200FCFA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C7876A298B94C200FCFA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,14 +167,6 @@
 			path = MyDatabase;
 			sourceTree = "<group>";
 		};
-		80304D00298BF1D200DFCEDA /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				80304D01298BF1EA00DFCEDA /* RealmHelper.swift */,
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
 		80304D03298BF38000DFCEDA /* Remote */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +209,15 @@
 				80304D1A298C0BA300DFCEDA /* verbs.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		80304D27298C18E700DFCEDA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				80304D01298BF1EA00DFCEDA /* RealmHelper.swift */,
+				80304D28298C18FC00DFCEDA /* JsonFileHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		80C7875C298B94C200FCFA08 = {
@@ -351,8 +358,8 @@
 		80C78796298B99C100FCFA08 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				80304D27298C18E700DFCEDA /* Helper */,
 				80304D17298C0B8400DFCEDA /* Json */,
-				80304D00298BF1D200DFCEDA /* Realm */,
 				80C78797298B99CD00FCFA08 /* Constans.swift */,
 			);
 			path = Misc;
@@ -438,6 +445,8 @@
 			children = (
 				80C787D8298BC98C00FCFA08 /* ImageListViewModel.swift */,
 				80C787DA298BC9F600FCFA08 /* ImageListViewModelImpl.swift */,
+				80304D20298C0C5000DFCEDA /* ImageDetailViewModel.swift */,
+				80304D22298C0CE400DFCEDA /* ImageDetailViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -625,12 +634,14 @@
 				80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */,
 				80C787DD298BCB5800FCFA08 /* ViewModelModule.swift in Sources */,
 				80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */,
+				80304D29298C18FC00DFCEDA /* JsonFileHelper.swift in Sources */,
 				80C78798298B99CD00FCFA08 /* Constans.swift in Sources */,
 				80C787DF298BCC4600FCFA08 /* UIKitControllerModule.swift in Sources */,
 				80C787A1298B9B2700FCFA08 /* InjectorResolver.swift in Sources */,
 				80C7879A298B9A0A00FCFA08 /* MyAFRequest.swift in Sources */,
 				80C787BB298BA6C600FCFA08 /* GetImageListDataSource.swift in Sources */,
 				80C7879C298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift in Sources */,
+				80304D21298C0C5000DFCEDA /* ImageDetailViewModel.swift in Sources */,
 				80C787A9298B9BBA00FCFA08 /* MainInjectorResolver.swift in Sources */,
 				80C7878F298B98D600FCFA08 /* MyAPIModule.swift in Sources */,
 				80C787B8298BA69800FCFA08 /* MyJsonAPI+ImageList.swift in Sources */,
@@ -658,6 +669,7 @@
 				80C787DB298BC9F600FCFA08 /* ImageListViewModelImpl.swift in Sources */,
 				80C787BE298BA72000FCFA08 /* DataImageEntity.swift in Sources */,
 				80C7878D298B98A300FCFA08 /* SingletonScope.swift in Sources */,
+				80304D23298C0CE400DFCEDA /* ImageDetailViewModelImpl.swift in Sources */,
 				80304D06298BF3BA00DFCEDA /* RealmDatabaseModule.swift in Sources */,
 				80C787C1298BAD6C00FCFA08 /* ImageListViewController.swift in Sources */,
 				80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */,

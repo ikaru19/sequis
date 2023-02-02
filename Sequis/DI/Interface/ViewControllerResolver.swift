@@ -10,4 +10,5 @@ import Cleanse
 
 protocol ViewControllerResolver: AnyObject {
     func instantiateImageListViewController() -> Provider<ImageListViewController>
+    func instantiateImageDetailViewController() -> Provider<ImageDetailViewController>
 }

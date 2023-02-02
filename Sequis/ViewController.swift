@@ -21,30 +21,21 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         (UIApplication.shared.delegate as? ProvideInjectorResolver)?.injectorResolver.inject(self)
-        test()
+        goToMainPage()
     }
 
-    var data: GetImageListDataSource?
-    func injectProperties(
-            viewController: TaggedProvider<MyBaseUrl>,
-            data: GetImageListDataSource
-    ){
-        self.data = data
+    private func goToMainPage() {
+        if let vc = (UIApplication.shared.delegate as? ProvideViewControllerResolver)?.vcResolver.instantiateImageListViewController().get() {
+            let vcNav = UINavigationController(rootViewController: vc)
+            self.presentInFullScreen(vcNav, animated: true, completion: nil)
+        }
     }
-    
-    func test() {
-        data?
-            .getImageList()
-            .subscribe(
-                onSuccess: { data in
-                    print("40")
-                    print(data.count)
-                },
-                onError: { error in
-                    print("44")
-                    print(error)
-                }
-            ).disposed(by: bag)
+
+
+    func injectProperties(
+            viewController: TaggedProvider<MyBaseUrl>
+    ){
+
     }
 }
 

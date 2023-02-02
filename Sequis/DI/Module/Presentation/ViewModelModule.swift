@@ -12,5 +12,7 @@ struct ViewModelModule: Module {
     static func configure(binder: UnscopedBinder) {
         binder.bind(ImageListViewModel.self)
                 .to(factory: ImageListViewModelImpl.init)
+        binder.bind(ImageDetailViewModel.self)
+                .to(factory: ImageDetailViewModelImpl.init)
     }
 }
