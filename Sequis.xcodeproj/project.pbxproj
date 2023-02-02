@@ -14,6 +14,26 @@
 		80C78770298B94C200FCFA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C7876E298B94C200FCFA08 /* Main.storyboard */; };
 		80C78772298B94C800FCFA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C78771298B94C800FCFA08 /* Assets.xcassets */; };
 		80C78775298B94C800FCFA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C78773298B94C800FCFA08 /* LaunchScreen.storyboard */; };
+		80C78783298B97FC00FCFA08 /* JsonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78782298B97FC00FCFA08 /* JsonRequest.swift */; };
+		80C7878A298B987F00FCFA08 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78789298B987F00FCFA08 /* DataModule.swift */; };
+		80C7878D298B98A300FCFA08 /* SingletonScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7878C298B98A300FCFA08 /* SingletonScope.swift */; };
+		80C7878F298B98D600FCFA08 /* MyAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7878E298B98D600FCFA08 /* MyAPIModule.swift */; };
+		80C78793298B996000FCFA08 /* MyJsonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78792298B996000FCFA08 /* MyJsonAPI.swift */; };
+		80C78795298B999900FCFA08 /* NetworkingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78794298B999900FCFA08 /* NetworkingModule.swift */; };
+		80C78798298B99CD00FCFA08 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78797298B99CD00FCFA08 /* Constans.swift */; };
+		80C7879A298B9A0A00FCFA08 /* MyAFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C78799298B9A0A00FCFA08 /* MyAFRequest.swift */; };
+		80C7879C298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7879B298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift */; };
+		80C7879E298B9AF600FCFA08 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7879D298B9AF600FCFA08 /* CoreModule.swift */; };
+		80C787A1298B9B2700FCFA08 /* InjectorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787A0298B9B2700FCFA08 /* InjectorResolver.swift */; };
+		80C787A3298B9B4200FCFA08 /* ProvidedInjectorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787A2298B9B4200FCFA08 /* ProvidedInjectorResolver.swift */; };
+		80C787A5298B9B5700FCFA08 /* ProvideViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787A4298B9B5700FCFA08 /* ProvideViewControllerResolver.swift */; };
+		80C787A7298B9B8600FCFA08 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787A6298B9B8600FCFA08 /* ViewControllerResolver.swift */; };
+		80C787A9298B9BBA00FCFA08 /* MainInjectorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787A8298B9BBA00FCFA08 /* MainInjectorResolver.swift */; };
+		80C787AD298B9C0600FCFA08 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787AC298B9C0600FCFA08 /* AppComponent.swift */; };
+		80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787AE298B9D5100FCFA08 /* MainViewControllerResolver.swift */; };
+		80C787B2298BA41F00FCFA08 /* MainPageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787B1298BA41F00FCFA08 /* MainPageModule.swift */; };
+		80C787B4298BA42A00FCFA08 /* PresentationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787B3298BA42A00FCFA08 /* PresentationModule.swift */; };
+		80C787B6298BA45100FCFA08 /* UIKitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C787B5298BA45100FCFA08 /* UIKitModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +45,26 @@
 		80C78771298B94C800FCFA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80C78774298B94C800FCFA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80C78776298B94C800FCFA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80C78782298B97FC00FCFA08 /* JsonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequest.swift; sourceTree = "<group>"; };
+		80C78789298B987F00FCFA08 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		80C7878C298B98A300FCFA08 /* SingletonScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonScope.swift; sourceTree = "<group>"; };
+		80C7878E298B98D600FCFA08 /* MyAPIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIModule.swift; sourceTree = "<group>"; };
+		80C78792298B996000FCFA08 /* MyJsonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJsonAPI.swift; sourceTree = "<group>"; };
+		80C78794298B999900FCFA08 /* NetworkingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingModule.swift; sourceTree = "<group>"; };
+		80C78797298B99CD00FCFA08 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		80C78799298B9A0A00FCFA08 /* MyAFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAFRequest.swift; sourceTree = "<group>"; };
+		80C7879B298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAFRequest+JsonRequest.swift"; sourceTree = "<group>"; };
+		80C7879D298B9AF600FCFA08 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
+		80C787A0298B9B2700FCFA08 /* InjectorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorResolver.swift; sourceTree = "<group>"; };
+		80C787A2298B9B4200FCFA08 /* ProvidedInjectorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidedInjectorResolver.swift; sourceTree = "<group>"; };
+		80C787A4298B9B5700FCFA08 /* ProvideViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideViewControllerResolver.swift; sourceTree = "<group>"; };
+		80C787A6298B9B8600FCFA08 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
+		80C787A8298B9BBA00FCFA08 /* MainInjectorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInjectorResolver.swift; sourceTree = "<group>"; };
+		80C787AC298B9C0600FCFA08 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		80C787AE298B9D5100FCFA08 /* MainViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerResolver.swift; sourceTree = "<group>"; };
+		80C787B1298BA41F00FCFA08 /* MainPageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageModule.swift; sourceTree = "<group>"; };
+		80C787B3298BA42A00FCFA08 /* PresentationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationModule.swift; sourceTree = "<group>"; };
+		80C787B5298BA45100FCFA08 /* UIKitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitModule.swift; sourceTree = "<group>"; };
 		9DE8D392EB93AD9758AB2F9B /* Pods-Sequis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sequis.release.xcconfig"; path = "Target Support Files/Pods-Sequis/Pods-Sequis.release.xcconfig"; sourceTree = "<group>"; };
 		A2A304FD7105DF611FB955A4 /* Pods_Sequis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sequis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB46F0163EC65A61F725688 /* Pods-Sequis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sequis.debug.xcconfig"; path = "Target Support Files/Pods-Sequis/Pods-Sequis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +103,10 @@
 		80C78767298B94C200FCFA08 /* Sequis */ = {
 			isa = PBXGroup;
 			children = (
+				80C78796298B99C100FCFA08 /* Misc */,
+				80C78786298B984500FCFA08 /* DI */,
+				80C78781298B97E900FCFA08 /* Infrastructure */,
+				80C78780298B97A800FCFA08 /* DataLayer */,
 				80C78768298B94C200FCFA08 /* AppDelegate.swift */,
 				80C7876A298B94C200FCFA08 /* SceneDelegate.swift */,
 				80C7876C298B94C200FCFA08 /* ViewController.swift */,
@@ -70,8 +114,128 @@
 				80C78771298B94C800FCFA08 /* Assets.xcassets */,
 				80C78773298B94C800FCFA08 /* LaunchScreen.storyboard */,
 				80C78776298B94C800FCFA08 /* Info.plist */,
+				80C787A8298B9BBA00FCFA08 /* MainInjectorResolver.swift */,
+				80C787AC298B9C0600FCFA08 /* AppComponent.swift */,
+				80C787AE298B9D5100FCFA08 /* MainViewControllerResolver.swift */,
 			);
 			path = Sequis;
+			sourceTree = "<group>";
+		};
+		80C78780298B97A800FCFA08 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				80C78790298B993F00FCFA08 /* Remote */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		80C78781298B97E900FCFA08 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				80C78785298B981400FCFA08 /* Alamofire */,
+				80C78784298B980A00FCFA08 /* Interface */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		80C78784298B980A00FCFA08 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				80C78782298B97FC00FCFA08 /* JsonRequest.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		80C78785298B981400FCFA08 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				80C78799298B9A0A00FCFA08 /* MyAFRequest.swift */,
+				80C7879B298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		80C78786298B984500FCFA08 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				80C7879F298B9B1800FCFA08 /* Interface */,
+				80C7878B298B989300FCFA08 /* Scope */,
+				80C78787298B984F00FCFA08 /* Module */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		80C78787298B984F00FCFA08 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				80C787B0298BA40900FCFA08 /* Presentation */,
+				80C78788298B985D00FCFA08 /* Data */,
+				80C7879D298B9AF600FCFA08 /* CoreModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		80C78788298B985D00FCFA08 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				80C78789298B987F00FCFA08 /* DataModule.swift */,
+				80C7878E298B98D600FCFA08 /* MyAPIModule.swift */,
+				80C78794298B999900FCFA08 /* NetworkingModule.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		80C7878B298B989300FCFA08 /* Scope */ = {
+			isa = PBXGroup;
+			children = (
+				80C7878C298B98A300FCFA08 /* SingletonScope.swift */,
+			);
+			path = Scope;
+			sourceTree = "<group>";
+		};
+		80C78790298B993F00FCFA08 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				80C78791298B994E00FCFA08 /* API */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		80C78791298B994E00FCFA08 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				80C78792298B996000FCFA08 /* MyJsonAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		80C78796298B99C100FCFA08 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				80C78797298B99CD00FCFA08 /* Constans.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		80C7879F298B9B1800FCFA08 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				80C787A0298B9B2700FCFA08 /* InjectorResolver.swift */,
+				80C787A2298B9B4200FCFA08 /* ProvidedInjectorResolver.swift */,
+				80C787A4298B9B5700FCFA08 /* ProvideViewControllerResolver.swift */,
+				80C787A6298B9B8600FCFA08 /* ViewControllerResolver.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		80C787B0298BA40900FCFA08 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				80C787B1298BA41F00FCFA08 /* MainPageModule.swift */,
+				80C787B3298BA42A00FCFA08 /* PresentationModule.swift */,
+				80C787B5298BA45100FCFA08 /* UIKitModule.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		AA8E6532EEA95E94ACEB7B14 /* Pods */ = {
@@ -80,7 +244,6 @@
 				ADB46F0163EC65A61F725688 /* Pods-Sequis.debug.xcconfig */,
 				9DE8D392EB93AD9758AB2F9B /* Pods-Sequis.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,7 +372,27 @@
 			files = (
 				80C7876D298B94C200FCFA08 /* ViewController.swift in Sources */,
 				80C78769298B94C200FCFA08 /* AppDelegate.swift in Sources */,
+				80C78798298B99CD00FCFA08 /* Constans.swift in Sources */,
+				80C787A1298B9B2700FCFA08 /* InjectorResolver.swift in Sources */,
+				80C7879A298B9A0A00FCFA08 /* MyAFRequest.swift in Sources */,
+				80C7879C298B9A2C00FCFA08 /* MyAFRequest+JsonRequest.swift in Sources */,
+				80C787A9298B9BBA00FCFA08 /* MainInjectorResolver.swift in Sources */,
+				80C7878F298B98D600FCFA08 /* MyAPIModule.swift in Sources */,
+				80C78795298B999900FCFA08 /* NetworkingModule.swift in Sources */,
+				80C787A5298B9B5700FCFA08 /* ProvideViewControllerResolver.swift in Sources */,
 				80C7876B298B94C200FCFA08 /* SceneDelegate.swift in Sources */,
+				80C787B4298BA42A00FCFA08 /* PresentationModule.swift in Sources */,
+				80C7879E298B9AF600FCFA08 /* CoreModule.swift in Sources */,
+				80C787A3298B9B4200FCFA08 /* ProvidedInjectorResolver.swift in Sources */,
+				80C787A7298B9B8600FCFA08 /* ViewControllerResolver.swift in Sources */,
+				80C787B2298BA41F00FCFA08 /* MainPageModule.swift in Sources */,
+				80C787AD298B9C0600FCFA08 /* AppComponent.swift in Sources */,
+				80C78793298B996000FCFA08 /* MyJsonAPI.swift in Sources */,
+				80C7878A298B987F00FCFA08 /* DataModule.swift in Sources */,
+				80C787B6298BA45100FCFA08 /* UIKitModule.swift in Sources */,
+				80C7878D298B98A300FCFA08 /* SingletonScope.swift in Sources */,
+				80C787AF298B9D5100FCFA08 /* MainViewControllerResolver.swift in Sources */,
+				80C78783298B97FC00FCFA08 /* JsonRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
