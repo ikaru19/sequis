@@ -48,7 +48,18 @@ class ImageListViewController: UIViewController {
         
         isInit = false
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        unsubscribeViewModel()
+    }
 
+    deinit {
+        unsubscribeViewModel()
+    }
+    
+    private func unsubscribeViewModel() {
+        vmBag = DisposeBag()
+    }
     
     private func subscribeViewModel() {
         viewModel.lastPage = lastPage
@@ -71,11 +82,7 @@ class ImageListViewController: UIViewController {
                             guard let self = self else {
                                 return
                             }
-                            if self.data.isEmpty {
-                                self.initImagesData(images)
-                            } else {
-                                self.appendImagesData(images)
-                            }
+                            self.initImagesData(images)
                         }
                 )
                 .disposed(by: vmBag)
@@ -170,6 +177,13 @@ extension ImageListViewController: UITableViewDelegate, UITableViewDataSource, U
         return cell
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (data.count - 1)
+            {
+                requestLoadMore()
+            }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = (UIApplication.shared.delegate as? ProvideViewControllerResolver)?.vcResolver.instantiateImageDetailViewController().get() {
             vc.data = data[indexPath.row]
@@ -177,14 +191,4 @@ extension ImageListViewController: UITableViewDelegate, UITableViewDataSource, U
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard let table = tvContent else {
-            return
-        }
-        let y = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.frame.size.height)
-        let relativeHeight = 1 - (table.rowHeight / (scrollView.contentSize.height - scrollView.frame.size.height))
-        if y >= relativeHeight{
-            requestLoadMore()
-        }
-    }
 }
