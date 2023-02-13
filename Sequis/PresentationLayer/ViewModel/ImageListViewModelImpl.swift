@@ -11,7 +11,7 @@ import RxRelay
 
 class ImageListViewModelImpl: ImageListViewModel {
     private var _errors: PublishRelay<Error> = PublishRelay()
-    private var _images: PublishRelay<[Domain.ImageEntity]> = PublishRelay()
+    private var _images: BehaviorRelay<[Domain.ImageEntity]> = BehaviorRelay<[Domain.ImageEntity]>(value: [])
     
     var errors: Observable<Error> {
         _errors.asObservable()
@@ -33,7 +33,8 @@ class ImageListViewModelImpl: ImageListViewModel {
             .getImages(page: page)
             .subscribe(
                 onSuccess: { [weak self] data in
-                    self?._images.accept(data)
+                    let value: [Domain.ImageEntity] = self?._images.value ?? []
+                    self?._images.accept(value + data)
                 },
                 onError: { [weak self] error in
                     self?._errors.accept(error)
